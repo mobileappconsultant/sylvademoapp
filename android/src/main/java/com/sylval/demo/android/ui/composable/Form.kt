@@ -20,6 +20,7 @@ fun Form(state: FormState, fields: List<Field>) {
             when (it.type) {
                 FieldType.Primary -> it.Content()
                 FieldType.Switch -> it.ContentSwitch()
+                FieldType.ImageInput ->it.ContentImage()
             }
             Spacer(modifier = Modifier.height(dp24))
         }

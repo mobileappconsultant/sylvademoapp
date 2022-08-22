@@ -69,6 +69,19 @@ class Field(
     }
 
     @Composable
+    fun ContentImage() {
+        var textEdit by remember {
+            mutableStateOf("")
+        }
+        text = textEdit
+        ImageInput(
+            label = label
+        ) {
+
+        }
+    }
+
+    @Composable
     fun ContentSwitch() {
         PrimarySwitch(
             isChecked = false,
@@ -112,5 +125,6 @@ class Field(
 
 enum class FieldType {
     Primary,
-    Switch
+    Switch,
+    ImageInput
 }

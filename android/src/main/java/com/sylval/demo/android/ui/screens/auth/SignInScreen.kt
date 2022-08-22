@@ -71,7 +71,6 @@ fun SignInScreen(onSignUp: () -> Unit, onSignIn: () -> Unit) {
                     ),
                 )
             )
-            Spacer(modifier = Modifier.height(dp32))
             UnderlineText(
                 text = stringResource(R.string.forgot_password),
                 fontWeight = FontWeight.W400,
