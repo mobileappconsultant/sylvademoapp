@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sylval">Sylval</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgotten Password</string>
+    <string name="login">Login</string>
+    <string name="register_for_an_account">Register for an account</string>
+    <string name="intending_care">Are you intending to use sylval to aid your professional care business</string>
+    <string name="are_you_a_carer">Are you a carer</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="register_text">With Sylval, your account is linked to a \'client, which is a person that needs care. This is most commonly a family member or loved one.\n\n Part of setting up your account requires you to create a \'sub\' account for this person or persons in order to request care appointments on their behalf.\n\n Don\'t worry, it\'s quick and easy to set up, and we\'ll show you how it works when you\'re finished. First, we\'ll need some basic information from you.</string>
+    <string name="email_verified">We\'ve verified your email address!\n\nNow, please supply the following information to finish setting up your account</string>
+    <string name="happy_to_exchange_care">I am happy to exchange care for someone who would provide care for my loved one</string>
+    <string name="care_for_loved_one">Care for a person loved one?</string>
+    <string name="next">Next</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="home_phone">Home phone</string>
+    <string name="address">Address</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="likes">Likes</string>
+    <string name="dislikes">Dislikes</string>
+    <string name="pets">Pets</string>
+    <string name="relation_client">Relation to client</string>
+    <string name="last_step">Last step, we promise.\n\nPlease enter the information of the person or persons that require care.</string>
+    <string name="finish">Finish</string>
+</resources>
