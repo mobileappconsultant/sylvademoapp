@@ -24,9 +24,11 @@ fun MainNavigation() {
             }
         }
         composable(route = Routes.SignIn.route) {
-            SignInScreen(onSignUp = {
-                navController.navigate(Routes.CarerQuestion.route)
-            }) {
+            SignInScreen(
+                onSignUp = {
+                    navController.navigate(Routes.CarerQuestion.route)
+                }
+            ) {
                 navController.navigate(Routes.HomeScreen.route) {
                     popUpTo(Routes.SignIn.route) { inclusive = true }
                 }

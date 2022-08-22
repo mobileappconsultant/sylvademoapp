@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
@@ -28,7 +27,7 @@ fun UserDropdown() {
             .background(color = PrimaryColor, shape = RoundedCornerShape(50))
             .clip(RoundedCornerShape(24))
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(4.dp)){
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(4.dp)) {
             Image(
                 painter = rememberAsyncImagePainter(model = R.drawable.user_avatar),
                 contentDescription = "",
@@ -44,6 +43,5 @@ fun UserDropdown() {
             PrimaryText(text = "Rachel Willis", textColor = Color.White)
             Icon(imageVector = Icons.Outlined.ArrowDropDown, contentDescription = "", tint = Color.White)
         }
-
     }
 }

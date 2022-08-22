@@ -77,7 +77,6 @@ class Field(
         ImageInput(
             label = label
         ) {
-
         }
     }
 

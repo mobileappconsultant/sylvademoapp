@@ -45,7 +45,6 @@ fun UserAppointmentListItem(date: String, type: String, name: String) {
             PrimaryText(text = date, fontSize = 18.sp)
             Spacer(modifier = Modifier.width(2.dp))
             PrimaryText(text = type, fontSize = 12.sp, textColor = Color.Gray.copy(alpha = 0.8f))
-
         }
 
         Spacer(modifier = Modifier.weight(1f))

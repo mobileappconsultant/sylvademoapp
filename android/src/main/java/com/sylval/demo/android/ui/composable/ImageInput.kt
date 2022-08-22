@@ -48,6 +48,5 @@ fun ImageInput(label: String, onImageSelected: (String) -> Unit) {
                     )
             )
         }
-
     }
 }

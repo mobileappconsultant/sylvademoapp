@@ -9,7 +9,7 @@ import com.sylval.demo.android.ui.theme.dp16
 import com.sylval.demo.android.ui.theme.sp18
 
 @Composable
-fun YesNoView(text : String, onClick : (Boolean) -> Unit) {
+fun YesNoView(text: String, onClick: (Boolean) -> Unit) {
     Column {
         PrimaryText(text = text, fontSize = sp18, fontWeight = FontWeight.Bold, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
         Spacer(modifier = Modifier.height(dp16))
@@ -21,8 +21,6 @@ fun YesNoView(text : String, onClick : (Boolean) -> Unit) {
             PrimaryButton(text = "Yes", modifier = Modifier.weight(1f)) {
                 onClick(true)
             }
-
         }
     }
 }
-

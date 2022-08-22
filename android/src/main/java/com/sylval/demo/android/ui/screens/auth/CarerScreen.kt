@@ -34,7 +34,7 @@ fun CarerQuestionScreen(text: String, currentLevel: Int, onContinue: (Boolean) -
                 }
                 Spacer(modifier = Modifier.height(dp48))
             }
-            ProgressStepView(Modifier.padding(24.dp),currentLevel = currentLevel, totalSteps = 5)
+            ProgressStepView(Modifier.padding(24.dp), currentLevel = currentLevel, totalSteps = 5)
         }
     }
 }
