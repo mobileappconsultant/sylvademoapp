@@ -38,7 +38,6 @@ private const val DISLIKES_FIELD = "DISLIKES_FIELD"
 private const val PETS_FIELD = "PETS_FIELD"
 private const val PHOTO_FIELD = "PHOTO_FIELD"
 private const val CARE_CHECK_FIELD = "CARE_CHECK_FIELD"
-private const val UPLOAD_PHOTO_FIELD = "UPLOAD_PHOTO_FIELD"
 
 @ExperimentalComposeUiApi
 @Composable
@@ -123,15 +122,6 @@ fun SignUpEmailConfirmedScreen(onContinue: () -> Unit) {
                                 imeAction = ImeAction.Next,
                                 keyboardType = KeyboardType.Text,
                                 isPasswordField = false
-                            ),
-                            Field(
-                                name = UPLOAD_PHOTO_FIELD, validators = listOf(Required()),
-                                label = stringResource(R.string.upload_photo),
-                                placeholder = stringResource(R.string.upload_photo),
-                                imeAction = ImeAction.Next,
-                                keyboardType = KeyboardType.Text,
-                                isPasswordField = false,
-                                type = FieldType.ImageInput
                             ),
                             Field(
                                 name = LIKES_FIELD, validators = listOf(Required()),

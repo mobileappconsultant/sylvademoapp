@@ -27,5 +27,4 @@
     <string name="relation_client">Relation to client</string>
     <string name="last_step">Last step, we promise.\n\nPlease enter the information of the person or persons that require care.</string>
     <string name="finish">Finish</string>
-    <string name="upload_photo">Upload photo</string>
 </resources>
