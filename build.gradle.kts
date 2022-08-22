@@ -1,4 +1,5 @@
 buildscript {
+    apply(from = "githooks.gradle")
     repositories {
         gradlePluginPortal()
         google()
@@ -10,6 +11,14 @@ buildscript {
         classpath(Build.kotlinGradlePlugin)
         classpath(Build.hiltGradlePlugin)
         classpath(Build.sqlDelightGradlePlugin)
+        classpath(Build.ktlintGradlePlugin)
+    }
+}
+subprojects {
+    apply(plugin = Plugins.ktlint)
+
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        disabledRules.set(kotlin.collections.listOf("import-ordering", "no-wildcard-imports"))
     }
 }
 

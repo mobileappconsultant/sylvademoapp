@@ -9,4 +9,5 @@ object Plugins {
     const val serialization = "plugin.serialization"
     const val kapt = "kapt"
     const val parcelize = "kotlin-parcelize"
+    const val ktlint = "org.jlleitschuh.gradle.ktlint"
 }

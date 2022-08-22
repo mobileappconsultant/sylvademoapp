@@ -9,5 +9,5 @@ sealed class Routes(val route: String) {
 
     object CarerQuestion : Routes("carerQuestionScreen")
     object IntendingCare : Routes("intendingCareScreen")
-
+    object HomeScreen : Routes("homeScreen")
 }
