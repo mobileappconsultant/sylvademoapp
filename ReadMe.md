@@ -1,7 +1,7 @@
 # Sylval Demo
 ## Features 🎨
 
-- **100% Kotlin-only project**.
+- **100% Kotlin Multi-Platform project**.
 - Coroutine, Jetpack compose, Hilt, Flow, AndroidX,MVVM.
 - 100% Gradle Kotlin DSL setup.
 - Dependency versions managed via `buildSrc`.
