@@ -92,4 +92,5 @@ dependencies {
 
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("androidx.security:security-crypto-ktx:1.1.0-alpha03")
+    implementation(kotlin("reflect"))
 }

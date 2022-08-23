@@ -7,7 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Preview
-import com.sylval.demo.android.ui.navigation.MainNavigation
+import com.sylval.demo.android.ui.navigation.AppNavigation
 import com.sylval.demo.android.ui.theme.SylvalTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SylvalTheme {
                 // A surface container using the 'background' color from the theme
-                MainNavigation()
+                AppNavigation()
             }
         }
     }

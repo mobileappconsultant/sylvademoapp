@@ -6,7 +6,7 @@ sealed class Routes(val route: String) {
     object SignUp : Routes("signUpScreen")
     object SignUpEmailConfirmed : Routes("signUpEmailConfirmed")
     object SignUpAddClientScreen : Routes("SignUpAddClientScreen")
-
+    object DrawerView : Routes("drawerView")
     object CarerQuestion : Routes("carerQuestionScreen")
     object IntendingCare : Routes("intendingCareScreen")
 }

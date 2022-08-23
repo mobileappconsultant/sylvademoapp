@@ -7,6 +7,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.sylval.demo.android.ui.composable.CustomIconButton
 import com.sylval.demo.android.ui.screens.home.composable.AppointmentCard
@@ -15,21 +16,34 @@ import com.sylval.demo.android.ui.screens.home.composable.UserAppointment
 import com.sylval.demo.android.ui.screens.home.composable.UserDropdown
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(openDrawer: () -> Unit) {
     Box(
         Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
         Column {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                CustomIconButton(icon = Icons.Filled.Menu) {
+            CustomAppBar(
+                topIcon = Icons.Filled.Menu,
+                content = {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .align(Alignment.Center),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CustomIconButton(
+                            icon = Icons.Filled.Notifications,
+                        ) {
+                            openDrawer.invoke()
+                        }
+                        Spacer(modifier = Modifier.width(16.dp))
+                        UserDropdown()
+                    }
                 }
-                Spacer(modifier = Modifier.weight(1f))
-                CustomIconButton(icon = Icons.Filled.Notifications) {
-                }
-                Spacer(modifier = Modifier.width(16.dp))
-                UserDropdown()
+            ) {
+                openDrawer()
             }
             Spacer(modifier = Modifier.height(24.dp))
             AppointmentCard()
@@ -51,5 +65,19 @@ fun HomeScreen() {
                 )
             )
         }
+    }
+}
+
+@Composable
+fun CustomAppBar(
+    topIcon: ImageVector,
+    content: @Composable BoxScope.() -> Unit,
+    onIconClicked: () -> Unit
+) {
+    Box {
+        CustomIconButton(icon = topIcon, modifier = Modifier.align(Alignment.CenterStart)) {
+            onIconClicked.invoke()
+        }
+        content()
     }
 }

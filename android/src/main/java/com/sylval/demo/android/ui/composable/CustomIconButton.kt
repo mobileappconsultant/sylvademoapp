@@ -13,8 +13,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CustomIconButton(icon: ImageVector, onClick: () -> Unit) {
-    Card(elevation = 8.dp, shape = CircleShape, backgroundColor = Color.White, modifier = Modifier.clickable { onClick.invoke() }) {
+fun CustomIconButton(icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Card(elevation = 8.dp, shape = CircleShape, backgroundColor = Color.White, modifier = modifier.clickable { onClick.invoke() }) {
         Icon(
             imageVector = icon,
             contentDescription = "",
