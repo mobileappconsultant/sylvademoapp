@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "close-up-head-shot-confident-young-man-studio-portrait-close-up-head-shot-confident-serious-concentrated-young-man-looking-170081471.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
