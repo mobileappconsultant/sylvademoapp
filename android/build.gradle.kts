@@ -6,7 +6,6 @@ plugins {
     id(Plugins.hilt)
 }
 
-
 android {
     compileSdk = 32
 
@@ -49,7 +48,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation(project(":shared"))
     implementation(Kotlin.core)
@@ -77,7 +75,6 @@ dependencies {
     implementation(Kotlin.coroutinesCore)
     implementation(Kotlin.coroutineReactive)
 
-
     testImplementation(Test.coreTesting)
     testImplementation(Test.coroutineTest)
     testImplementation(Test.turbine)
@@ -95,6 +92,5 @@ dependencies {
 
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("androidx.security:security-crypto-ktx:1.1.0-alpha03")
-
+    implementation(kotlin("reflect"))
 }
-

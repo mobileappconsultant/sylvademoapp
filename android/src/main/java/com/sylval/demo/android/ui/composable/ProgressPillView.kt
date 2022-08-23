@@ -30,17 +30,17 @@ fun ProgressStepView(modifier: Modifier, currentLevel: Int, totalSteps: Int) {
                 }
             }
             Step(stepType)
-            if(i < totalSteps){
+            if (i < totalSteps) {
                 Row(modifier = Modifier.weight(1f)) {
                     Divider(
                         Modifier
                             .height(2.dp)
                             .padding(horizontal = 8.dp)
-                            .fillMaxWidth(), color = PrimaryColor
+                            .fillMaxWidth(),
+                        color = PrimaryColor
                     )
                 }
             }
-
         }
     }
 }
@@ -73,6 +73,6 @@ enum class StepType(val color: Color, val borderColor: Color) {
 @Composable
 fun PreviewStep() {
     Box(modifier = Modifier.background(Color.White)) {
-        ProgressStepView(modifier = Modifier.padding(horizontal = 32.dp),3, 5)
+        ProgressStepView(modifier = Modifier.padding(horizontal = 32.dp), 3, 5)
     }
 }

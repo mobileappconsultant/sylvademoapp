@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import com.sylval.demo.android.ui.theme.dp16
 import com.sylval.demo.android.ui.theme.dp24
-import com.sylval.demo.android.ui.theme.dp8
 
 @ExperimentalComposeUiApi
 @Composable

@@ -11,6 +11,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.TextFieldDefaults.indicatorLine
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.runtime.Composable
@@ -148,43 +149,97 @@ fun CustomTextField(
     val mergedTextStyle = textStyle.merge(TextStyle(color = textColor))
 
     @OptIn(ExperimentalMaterialApi::class)
-    (BasicTextField(
-        value = value,
-        modifier = modifier
-            .background(colors.backgroundColor(enabled).value, shape)
-            .indicatorLine(enabled, isError, interactionSource, colors),
-        onValueChange = onValueChange,
-        enabled = enabled,
-        readOnly = readOnly,
-        textStyle = mergedTextStyle,
-        cursorBrush = SolidColor(colors.cursorColor(isError).value),
-        visualTransformation = visualTransformation,
-        keyboardOptions = keyboardOptions,
-        keyboardActions = keyboardActions,
-        interactionSource = interactionSource,
-        singleLine = singleLine,
-        maxLines = maxLines,
-        decorationBox = @Composable { innerTextField ->
-            // places leading icon, text field with label and placeholder, trailing icon
-            TextFieldDefaults.TextFieldDecorationBox(
-                value = value,
-                visualTransformation = visualTransformation,
-                innerTextField = innerTextField,
-                placeholder = placeholder,
-                label = label,
-                leadingIcon = leadingIcon,
-                trailingIcon = trailingIcon,
-                singleLine = singleLine,
-                enabled = enabled,
-                isError = isError,
-                interactionSource = interactionSource,
-                colors = colors,
-                contentPadding = PaddingValues(0.dp)
-            )
-        }
-    ))
+    (
+        BasicTextField(
+            value = value,
+            modifier = modifier
+                .background(colors.backgroundColor(enabled).value, shape)
+                .indicatorLine(enabled, isError, interactionSource, colors),
+            onValueChange = onValueChange,
+            enabled = enabled,
+            readOnly = readOnly,
+            textStyle = mergedTextStyle,
+            cursorBrush = SolidColor(colors.cursorColor(isError).value),
+            visualTransformation = visualTransformation,
+            keyboardOptions = keyboardOptions,
+            keyboardActions = keyboardActions,
+            interactionSource = interactionSource,
+            singleLine = singleLine,
+            maxLines = maxLines,
+            decorationBox = @Composable { innerTextField ->
+                // places leading icon, text field with label and placeholder, trailing icon
+                TextFieldDefaults.TextFieldDecorationBox(
+                    value = value,
+                    visualTransformation = visualTransformation,
+                    innerTextField = innerTextField,
+                    placeholder = placeholder,
+                    label = label,
+                    leadingIcon = leadingIcon,
+                    trailingIcon = trailingIcon,
+                    singleLine = singleLine,
+                    enabled = enabled,
+                    isError = isError,
+                    interactionSource = interactionSource,
+                    colors = colors,
+                    contentPadding = PaddingValues(0.dp)
+                )
+            }
+        )
+        )
 }
 
+@ExperimentalComposeUiApi
+@Composable
+fun SearchTextBox(
+    modifier: Modifier,
+    value: String = "",
+    placeholder: String,
+    imeAction: ImeAction = ImeAction.Search,
+    keyboardType: KeyboardType = KeyboardType.Text,
+    onTextChanged: (String) -> Unit,
+    onKeyboardAction: ((String) -> Unit)? = null,
+) {
+    val text = remember { mutableStateOf(value) }
+    val keyboardController = LocalSoftwareKeyboardController.current
+    CustomTextField(
+        shape = RoundedCornerShape(dp12),
+        singleLine = true,
+        value = text.value,
+        colors = TextFieldDefaults.textFieldColors(
+            backgroundColor = Color.Gray.copy(alpha = 0.5f),
+            textColor = Color.Black,
+            unfocusedIndicatorColor = Color.Transparent,
+            focusedIndicatorColor = Color.Transparent
+        ),
+        modifier = modifier,
+        placeholder = {
+            Text(
+                text = placeholder,
+                color = FadedBlack,
+                fontWeight = FontWeight.Light,
+                fontSize = 12.sp
+            )
+        },
+        leadingIcon = {
+            Icon(
+                imageVector = Icons.Filled.Search,
+                contentDescription = "Search",
+                Modifier.size(16.dp)
+            )
+        },
+        onValueChange = {
+            onTextChanged(it)
+            text.value = it
+        },
+        keyboardOptions = KeyboardOptions(imeAction = imeAction, keyboardType = keyboardType),
+        keyboardActions = KeyboardActions(
+            onAny = {
+                keyboardController?.hide()
+                onKeyboardAction?.invoke(text.value)
+            }
+        )
+    )
+}
 
 @ExperimentalComposeUiApi
 @Composable

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -24,7 +23,6 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.sylval.demo.android.utils.Email
 import com.sylval.demo.android.utils.Password
 import com.sylval.demo.android.utils.Required
@@ -105,10 +103,8 @@ fun SignInScreen(onSignUp: () -> Unit, onSignIn: () -> Unit) {
 @Preview
 @Composable
 fun PreviewScreen() {
-    Box(modifier = Modifier.background(Color.White)){
+    Box(modifier = Modifier.background(Color.White)) {
         SignInScreen(onSignUp = { /*TODO*/ }) {
-
         }
     }
-
 }
