@@ -9,14 +9,13 @@ import androidx.navigation.compose.rememberNavController
 import com.sylval.demo.android.R
 import com.sylval.demo.android.ui.screens.auth.*
 import com.sylval.demo.android.ui.screens.home.DrawerView
-import com.sylval.demo.android.ui.screens.home.HomeScreen
 import com.sylval.demo.android.ui.screens.splash.SplashScreen
 
 @ExperimentalComposeUiApi
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
-    NavHost(navController, startDestination = Routes.DrawerView.route) {
+    NavHost(navController, startDestination = Routes.Splash.route) {
         composable(route = Routes.Splash.route) {
             SplashScreen {
                 navController.navigate(Routes.SignIn.route) {
@@ -25,9 +24,11 @@ fun AppNavigation() {
             }
         }
         composable(route = Routes.SignIn.route) {
-            SignInScreen(onSignUp = {
-                navController.navigate(Routes.CarerQuestion.route)
-            }) {
+            SignInScreen(
+                onSignUp = {
+                    navController.navigate(Routes.CarerQuestion.route)
+                }
+            ) {
                 navController.navigate(Routes.DrawerView.route) {
                     popUpTo(Routes.SignIn.route) { inclusive = true }
                 }
