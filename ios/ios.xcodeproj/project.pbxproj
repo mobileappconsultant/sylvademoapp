@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,10 @@
 		FA23620228B42A4D001E9E86 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23620128B42A4D001E9E86 /* MainViewController.swift */; };
 		FA23620528B42EB7001E9E86 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23620428B42EB7001E9E86 /* UIView.swift */; };
 		FA23620728B43876001E9E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23620628B43876001E9E86 /* LoginViewController.swift */; };
+		FA8C413428B6508E003CE9AF /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C413328B6508E003CE9AF /* SideMenuViewController.swift */; };
+		FA8C413628B650A9003CE9AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C413528B650A9003CE9AF /* HomeViewController.swift */; };
+		FA8C413828B65ADC003CE9AF /* NavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C413728B65ADC003CE9AF /* NavBar.xib */; };
+		FA8C413A28B65BFC003CE9AF /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C413928B65BFC003CE9AF /* NavBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		FA23620128B42A4D001E9E86 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA23620428B42EB7001E9E86 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		FA23620628B43876001E9E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA8C413328B6508E003CE9AF /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		FA8C413528B650A9003CE9AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA8C413728B65ADC003CE9AF /* NavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavBar.xib; sourceTree = "<group>"; };
+		FA8C413928B65BFC003CE9AF /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 				FA2361F828B2CCDC001E9E86 /* carers.xib */,
 				FA2361FA28B2DA80001E9E86 /* chat_contact.xib */,
 				FA2361FC28B38E3B001E9E86 /* care_contact.xib */,
+				FA8C413728B65ADC003CE9AF /* NavBar.xib */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -138,6 +147,7 @@
 				FA0702B528B5296A0038FE98 /* ChatContact.swift */,
 				FA0702B728B544B90038FE98 /* CareContact.swift */,
 				FA0702B928B551E90038FE98 /* Carers.swift */,
+				FA8C413928B65BFC003CE9AF /* NavBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 				FA23620328B42D6F001E9E86 /* extensions */,
 				FA23620128B42A4D001E9E86 /* MainViewController.swift */,
 				FA23620628B43876001E9E86 /* LoginViewController.swift */,
+				FA8C413328B6508E003CE9AF /* SideMenuViewController.swift */,
+				FA8C413528B650A9003CE9AF /* HomeViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,7 +185,6 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				961A78DB840C2AEEFCEE4943 /* Frameworks */,
-				E3F69E5F557B4F77D309043A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +236,7 @@
 				FA2361FB28B2DA80001E9E86 /* chat_contact.xib in Resources */,
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
 				FA2361F928B2CCDC001E9E86 /* carers.xib in Resources */,
+				FA8C413828B65ADC003CE9AF /* NavBar.xib in Resources */,
 				FA2361F728B25474001E9E86 /* appointmenti.xib in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
 				FA2361F128B23913001E9E86 /* main.storyboard in Resources */,
@@ -258,23 +270,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E3F69E5F557B4F77D309043A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios/Pods-ios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -286,12 +281,15 @@
 				FA23620528B42EB7001E9E86 /* UIView.swift in Sources */,
 				FA0702AF28B4B6E10038FE98 /* UIColor.swift in Sources */,
 				FA0702BA28B551E90038FE98 /* Carers.swift in Sources */,
+				FA8C413428B6508E003CE9AF /* SideMenuViewController.swift in Sources */,
 				FA23620228B42A4D001E9E86 /* MainViewController.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				FA0702B428B4EE510038FE98 /* AppointmentV2.swift in Sources */,
 				FA0702B628B5296A0038FE98 /* ChatContact.swift in Sources */,
 				FA0702B828B544B90038FE98 /* CareContact.swift in Sources */,
 				FA23620728B43876001E9E86 /* LoginViewController.swift in Sources */,
+				FA8C413A28B65BFC003CE9AF /* NavBar.swift in Sources */,
+				FA8C413628B650A9003CE9AF /* HomeViewController.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,13 +420,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ios/Preview Content\"";
+				DEVELOPMENT_TEAM = R4LCZSSM99;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = sylvademoapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,13 +441,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ios/Preview Content\"";
+				DEVELOPMENT_TEAM = R4LCZSSM99;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = sylvademoapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

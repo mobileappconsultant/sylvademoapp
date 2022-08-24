@@ -12,6 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatContact" customModule="ios" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="V7i-Gs-s5Q" id="Yy7-Av-tFo"/>
+                <outlet property="image" destination="q9n-6W-EmN" id="vVb-aa-4T0"/>
+                <outlet property="resentText" destination="KWN-gu-EtM" id="WNy-gg-rlC"/>
+                <outlet property="timeSent" destination="8DU-ky-Emw" id="lMT-Rz-DLc"/>
+                <outlet property="uname" destination="dNW-Rb-P7D" id="zmq-BK-AyF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

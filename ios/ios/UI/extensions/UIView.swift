@@ -94,3 +94,10 @@ extension UIView {
         }
     
 }
+
+
+extension UIResponder {
+    public var parentViewController: UIViewController? {
+        return next as? UIViewController ?? next?.parentViewController
+    }
+}

@@ -1,14 +1,8 @@
 PODS:
   - shared (1.0)
-  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - shared (from `../shared`)
-  - SideMenu (~> 6.5)
-
-SPEC REPOS:
-  trunk:
-    - SideMenu
 
 EXTERNAL SOURCES:
   shared:
@@ -16,8 +10,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   shared: 07cac7993e4f05eda6b76f3a213b070947c3b79f
-  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 4283e1361688af55d4e68aab8ca2a900cafcafdf
+PODFILE CHECKSUM: 989c3371785a0e76194f7205a92e2975dbe2d5a4
 
 COCOAPODS: 1.11.2
