@@ -1,11 +1,3 @@
-//
-//  NavBar.swift
-//  ios
-//
-//  Created by Joseph Peter on 24/08/2022.
-//  Copyright © 2022 orgName. All rights reserved.
-//
-
 import UIKit
 
 class NavBar: UIView {

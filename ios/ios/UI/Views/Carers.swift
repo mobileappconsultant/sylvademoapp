@@ -1,11 +1,3 @@
-//
-//  Carers.swift
-//  ios
-//
-//  Created by Joseph Peter on 23/08/2022.
-//  Copyright © 2022 orgName. All rights reserved.
-//
-
 import UIKit
 
 class Carers: UIView {
